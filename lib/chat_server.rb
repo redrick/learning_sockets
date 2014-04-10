@@ -25,7 +25,7 @@ class ChatServer
 							sock.close
 							@descriptors.delete(sock)
 						else
-							str = sprintf(sock.peeraddr[2].to_s+" "+sock.peeraddr[1].to_s+" "+sock.gets().to_s+"\n")
+							str = sprintf(sock.peeraddr[2].to_s+" "+sock.peeraddr[1].to_s+" "+sock.gets().to_s)
 							broadcast_string(str, sock)
 						end
 					end
